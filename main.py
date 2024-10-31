@@ -14,7 +14,7 @@ client: Client = Client(intents=intents)
 
 async def send_message() -> None:
     try:
-        channel = client.get_channel(1301381285784326157)
+        channel = client.get_channel()
         if channel:
             response = "hello there how are you!"
             await channel.send(response)
