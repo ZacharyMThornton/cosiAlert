@@ -3,6 +3,6 @@ Alerts the COSI discord when the lab is open
 
 
 to run:
-import python-dotevn
-import discord
-import keyboard (this is just for testing purposes)
+`pip install python-dotevn`
+`pip install discord`
+`pip install keyboard` (this is just for testing purposes)
