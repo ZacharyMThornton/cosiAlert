@@ -12,9 +12,11 @@ intents: Intents = Intents.default()
 intents.message_content = True
 client: Client = Client(intents=intents)
 
+channelID = 1234 # add your channel ID here
+
 async def send_message() -> None:
     try:
-        channel = client.get_channel()
+        channel = client.get_channel(channelID)
         if channel:
             response = "hello there how are you!"
             await channel.send(response)
