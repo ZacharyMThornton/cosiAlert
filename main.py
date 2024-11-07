@@ -7,16 +7,15 @@ from discord import Intents, Client
 
 load_dotenv()
 TOKEN: Final[str] = os.getenv('DISCORD_TOKEN')
+SESSION: Final[int] = int(os.getenv('SESSION')
 
 intents: Intents = Intents.default()
 intents.message_content = True
 client: Client = Client(intents=intents)
 
-channelID = 1234 # add your channel ID here
-
 async def send_message() -> None:
     try:
-        channel = client.get_channel(channelID)
+        channel = client.get_channel(SESSION)
         if channel:
             response = "hello there how are you!"
             await channel.send(response)
